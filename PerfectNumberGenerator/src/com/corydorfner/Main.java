@@ -17,7 +17,10 @@ public class Main {
         if(sum < 10) {
             int remainder = check - sum;
             return (n * check) + remainder;
+        }else if(sum == 10){
+            return n;
+        }else {
+            return -1;
         }
-        return -1;
     }
 }
