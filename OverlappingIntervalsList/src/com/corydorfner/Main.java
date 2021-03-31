@@ -1,19 +1,20 @@
 package com.corydorfner;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
 
     public static void main(String[] args) {
         Interval[] arr = new Interval[4];
-        arr[0] = new Interval(6, 8);
-        arr[1] = new Interval(1, 9);
-        arr[2] = new Interval(2, 4);
-        arr[3] = new Interval(4, 7);
-//        arr[0] = new Interval(1,3);
-//        arr[1] = new Interval(5,8);
-//        arr[2] = new Interval(4,10);
-//        arr[3] = new Interval(20,25);
+//        arr[0] = new Interval(6, 8);
+//        arr[1] = new Interval(1, 9);
+//        arr[2] = new Interval(2, 4);
+//        arr[3] = new Interval(4, 7);
+        arr[0] = new Interval(1,3);
+        arr[1] = new Interval(5,8);
+        arr[2] = new Interval(4,10);
+        arr[3] = new Interval(20,25);
         MergeOverlappingIntervals.mergeIntervals(arr);
     }
 }
@@ -32,8 +33,8 @@ class MergeOverlappingIntervals {
     //Function that takes a set of intervals, merges
     //overlapping intervals and prints the result
     public static void mergeIntervals(Interval[] arr){
-        //Sort Intervals in decreasing order of start time
-        Arrays.sort(arr, (o1, o2) -> o2.start - o1.start);
+        //Sort Intervals in increasing order of start time
+        Arrays.sort(arr, Comparator.comparingInt(o -> o.start));
 
         int index = 0; //Stores index of last time in output array (modified arr[])
 
