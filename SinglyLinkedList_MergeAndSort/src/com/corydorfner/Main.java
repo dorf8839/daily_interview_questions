@@ -86,36 +86,3 @@ class Node {
         this.next = null;
     }
 }
-
-//class SLL {
-//    Node head = null;
-//    Node tail = null;
-//    public int size;
-//
-//    public void addNode(int data){
-//        Node newNode = new Node(data);
-//
-//        if(this.head == null){
-//            this.head = newNode;
-//            this.tail = newNode;
-//        }else{
-//            this.tail.next = newNode;
-//            this.tail = newNode;
-//        }
-//        this.size++;
-//    }
-//
-//    public void display(){
-//        Node current = this.head;
-//        if(head == null){
-//            System.out.println("List is empty");
-//            return;
-//        }
-//        System.out.println("Nodes of singly linked list");
-//        while(current != null){
-//            System.out.print(current.data + " ");
-//            current = current.next;
-//        }
-//        System.out.println();
-//    }
-//}
